@@ -1,9 +1,9 @@
-import Router from 'next/router'
-import { types } from 'react-bricks/frontend'
+import Router from 'next/router';
+import { types } from 'react-bricks/frontend';
 
-import bricks from './bricks'
-import pageTypes from './pageTypes'
-import NextLink from './NextLink'
+import bricks from './bricks';
+import pageTypes from './pageTypes';
+import NextLink from './NextLink';
 
 const config: types.ReactBricksConfig = {
   appId: process.env.NEXT_PUBLIC_APP_ID,
@@ -29,6 +29,6 @@ const config: types.ReactBricksConfig = {
   enableAutoSave: true,
   disableSaveIfInvalidProps: false,
   enablePreview: true,
-}
+};
 
-export default config
+export default config;

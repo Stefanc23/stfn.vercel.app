@@ -1,4 +1,4 @@
-import { types } from 'react-bricks/frontend'
+import { types } from 'react-bricks/frontend';
 
 const pageTypes: types.IPageType[] = [
   {
@@ -35,6 +35,6 @@ const pageTypes: types.IPageType[] = [
       'image',
     ],
   },
-]
+];
 
-export default pageTypes
+export default pageTypes;
