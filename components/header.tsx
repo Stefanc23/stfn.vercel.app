@@ -1,36 +1,88 @@
 import Link from 'next/link';
-import React from 'react';
+import Image from 'next/image';
+import React, { useState } from 'react';
+import OuterClickListener from './OuterClickListener';
 
-const Header: React.FC = () => (
-  <header className='bg-white sm:h-20 py-5 border-b sm:sticky top-0'>
-    <div className='max-w-5xl mx-auto px-6'>
-      <div className='w-full flex flex-col sm:flex-row justify-center sm:justify-between items-center'>
-        <div className='flex flex-col sm:flex-row items-center mb-4 sm:mb-0'>
-          <img
-            src='/react-bricks-logo.svg'
-            className='w-48'
-            alt='React Bricks'
-          />
-          <div className='sm:ml-8 flex space-x-5 text-center'>
-            <Link href='/'>
-              <a className='text-gray-500 hover:text-pink-700'>Home</a>
-            </Link>
-            <Link href='/about-us'>
-              <a className='text-gray-500 hover:text-pink-700'>About us</a>
-            </Link>
-            <Link href='/blog'>
-              <a className='text-gray-500 hover:text-pink-700'>Blog</a>
-            </Link>
-          </div>
-        </div>
-        <Link href='/admin' prefetch={false}>
-          <a className='py-2 px-5 rounded text-white font-medium bg-cyan-500 hover:bg-cyan-600 hover:shadow-lg transition duration-200'>
-            Edit content
-          </a>
+const Header: React.FC = () => {
+  const [expanded, setExpanded] = useState(false);
+  const links = [
+    { href: 'https://medium.com/@stefanocw', label: 'Blog' },
+    { href: '#about', label: 'About' },
+    { href: '#projects', label: 'Projects' },
+    { href: '#contact', label: 'Contact' },
+  ];
+
+  const handleClick = () => {
+    setExpanded(!expanded);
+  };
+
+  return (
+    <header className='fixed bottom-0 z-50 w-full bg-transparent py-4 lg:sticky lg:top-0'>
+      <div className='mx-auto w-11/12 flex items-center justify-between'>
+        <Link href='/'>
+          <Image src='/logo.webp' alt='logo' width={48} height={48} />
         </Link>
+        <nav>
+          <ul className='flex items-center justify-between space-x-4'>
+            <li className='lg:hidden'>
+              <button
+                className={`${
+                  expanded && 'text-primary'
+                } ml-auto inline-flex translate-y-0.5 rounded p-3 outline-none hover:text-primary lg:hidden`}
+                onClick={handleClick}
+                aria-label={expanded ? 'Hide menu' : 'Show menu'}
+              >
+                <div className='flex h-6 w-6 items-center justify-center'>
+                  {expanded ? (
+                    <span className='text-xl'>X</span>
+                  ) : (
+                    <svg
+                      fill='none'
+                      stroke='currentColor'
+                      viewBox='0 0 24 24'
+                      xmlns='http://www.w3.org/2000/svg'
+                    >
+                      <path
+                        strokeLinecap='round'
+                        strokeLinejoin='round'
+                        strokeWidth={2}
+                        d='M4 6h16M4 12h16M4 18h16'
+                      />
+                    </svg>
+                  )}
+                </div>
+              </button>
+            </li>
+            <ul className='hidden lg:flex lg:space-x-4'>
+              {links.map(({ href, label }) => (
+                <li
+                  key={`${href}${label}`}
+                  className='text-primary hover:text-secondary transition-colors'
+                >
+                  <Link href={href}>{label}</Link>
+                </li>
+              ))}
+            </ul>
+          </ul>
+
+          {expanded && (
+            <ul className='fixed bottom-20 right-[8%] border-r-2 border-primary-400 bg-transparent px-4 py-2 text-right md:right-[6%] lg:hidden'>
+              <OuterClickListener action={handleClick}>
+                {links.map(({ href, label }) => (
+                  <li
+                    key={`${href}${label}`}
+                    className='mb-3 last:mb-0text-primary hover:text-secondary transition-colors'
+                  >
+                    <Link href={href}>{label}</Link>
+                  </li>
+                ))}
+              </OuterClickListener>
+            </ul>
+          )}
+        </nav>
       </div>
-    </div>
-  </header>
-);
+    </header>
+  );
+};
 
 export default Header;
