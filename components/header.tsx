@@ -20,7 +20,13 @@ const Header: React.FC = () => {
     <header className='fixed bottom-0 z-50 w-full bg-transparent py-4 lg:sticky lg:top-0'>
       <div className='mx-auto w-11/12 flex items-center justify-between'>
         <Link href='/'>
-          <Image src='/logo.webp' alt='logo' width={48} height={48} />
+          <Image
+            className='cursor-pointer'
+            src='/logo.webp'
+            alt='logo'
+            width={48}
+            height={48}
+          />
         </Link>
         <nav>
           <ul className='flex items-center justify-between space-x-4'>
@@ -66,12 +72,12 @@ const Header: React.FC = () => {
           </ul>
 
           {expanded && (
-            <ul className='fixed bottom-20 right-[8%] border-r-2 border-primary-400 bg-transparent px-4 py-2 text-right md:right-[6%] lg:hidden'>
+            <ul className='fixed bottom-20 right-[8%] border-r-2 border-primary bg-transparent px-4 py-2 text-right md:right-[6%] lg:hidden'>
               <OuterClickListener action={handleClick}>
                 {links.map(({ href, label }) => (
                   <li
                     key={`${href}${label}`}
-                    className='mb-3 last:mb-0text-primary hover:text-secondary transition-colors'
+                    className='mb-3 last:mb-0 text-primary hover:text-secondary transition-colors'
                   >
                     <Link href={href}>{label}</Link>
                   </li>
