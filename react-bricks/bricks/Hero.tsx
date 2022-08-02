@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, types, Repeater } from 'react-bricks/frontend';
+import { Text, Repeater, types } from 'react-bricks/frontend';
 import Section from '../../components/Section';
 
 //=============================

@@ -18,7 +18,7 @@ const Header: React.FC = () => {
 
   return (
     <header className='fixed bottom-0 z-50 w-full bg-transparent py-4 lg:sticky lg:top-0'>
-      <div className='mx-auto w-11/12 flex items-center justify-between'>
+      <div className='max-w-[68.75rem] mx-auto w-11/12 flex items-center justify-between'>
         <Link href='/'>
           <Image
             className='cursor-pointer'

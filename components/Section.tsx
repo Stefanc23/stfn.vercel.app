@@ -20,7 +20,9 @@ const Section: React.FC<SectionProps> = ({
   return (
     <section
       id={id}
-      className={`layout mb-32 ${!isHero && 'pt-16'} ${className}`}
+      className={`max-w-[68.75rem] mx-auto w-11/12 mb-32 ${
+        !isHero && 'pt-16'
+      } ${className}`}
     >
       {!isHero && (
         <>
