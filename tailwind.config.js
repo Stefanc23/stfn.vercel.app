@@ -43,6 +43,22 @@ module.exports = {
       fontFamily: {
         sans: ['Inter', fontFamily.sans],
       },
+      animation: {
+        tilt: 'tilt 10s infinite linear',
+      },
+      keyframes: {
+        tilt: {
+          '0%, 50%, 100%': {
+            transform: 'rotate(0deg)',
+          },
+          '25%': {
+            transform: 'rotate(0.69deg)',
+          },
+          '75%': {
+            transform: 'rotate(-0.69deg)',
+          },
+        },
+      },
     },
   },
 };
