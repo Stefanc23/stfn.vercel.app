@@ -8,8 +8,8 @@ const Header: React.FC = () => {
   const links = [
     { href: 'https://medium.com/@stefanocw', label: 'Blog' },
     { href: '#about', label: 'About' },
+    { href: '#experience', label: 'Experience' },
     { href: '#projects', label: 'Projects' },
-    { href: '#contact', label: 'Contact' },
   ];
 
   const handleClick = () => {
