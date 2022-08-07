@@ -29,9 +29,9 @@ const Card: types.Brick<CardProps> = ({ ...rest }) => {
         />
         <Text
           renderBlock={(props) => (
-            <p className='text-lg md:text-xl xl:text-2xl font-semibold text-dark dark:text-white mb-1'>
+            <h2 className='text-lg md:text-xl xl:text-2xl font-semibold text-dark dark:text-white mb-1'>
               {props.children}
-            </p>
+            </h2>
           )}
           placeholder='Type a title...'
           propName='title'
@@ -53,7 +53,10 @@ const Card: types.Brick<CardProps> = ({ ...rest }) => {
           )}
           placeholder='Type anything...'
           propName='content'
-          allowedFeatures={[types.RichTextFeatures.Highlight]}
+          allowedFeatures={[
+            types.RichTextFeatures.Highlight,
+            types.RichTextFeatures.UnorderedList,
+          ]}
           renderHighlight={(props) => (
             <span className='text-primary'>{props.children}</span>
           )}
@@ -71,6 +74,7 @@ export default Card;
 Card.schema = {
   name: 'card',
   label: 'Card',
+  hideFromAddMenu: true,
   getDefaultProps: () => ({
     overline: 'Overline',
     title: 'Title',

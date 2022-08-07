@@ -26,7 +26,7 @@ const About: types.Brick<AboutProps> = ({ title, subtitle }) => {
         <article className='col-span-2 mt-12 md:mt-0'>
           <RichText
             renderBlock={(props) => (
-              <h2 className='text-3xl md:text-lg xl:text-xl font-medium text-dark dark:text-light'>
+              <h2 className='text-md md:text-lg xl:text-xl font-medium text-dark dark:text-light'>
                 {props.children}
               </h2>
             )}
@@ -72,7 +72,7 @@ const About: types.Brick<AboutProps> = ({ title, subtitle }) => {
 // Brick Schema
 //=============================
 About.schema = {
-  name: 'About',
+  name: 'about',
   label: 'About',
   getDefaultProps: () => ({
     title: 'About',

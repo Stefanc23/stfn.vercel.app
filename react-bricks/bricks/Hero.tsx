@@ -24,7 +24,7 @@ const Hero: types.Brick<HeroProps> = () => {
     >
       <Text
         renderBlock={(props) => (
-          <p className='text-xl md:text-2xl xl:text-3xl text-center font-light text-dark dark:text-white leading-tight mb-3'>
+          <p className='text-lg md:text-2xl xl:text-3xl text-center font-light text-dark dark:text-white leading-tight mb-3'>
             {props.children}
           </p>
         )}
@@ -33,7 +33,7 @@ const Hero: types.Brick<HeroProps> = () => {
       />
       <Text
         renderBlock={(props) => (
-          <h1 className='text-3xl md:text-4xl xl:text-5xl text-center font-bold text-transparent bg-clip-text bg-gradient-to-br from-primary to-secondary leading-tight mb-3'>
+          <h1 className='text-2xl md:text-4xl xl:text-5xl text-center font-bold text-transparent bg-clip-text bg-gradient-to-br from-primary to-secondary leading-tight mb-3'>
             {props.children}
           </h1>
         )}
@@ -42,7 +42,7 @@ const Hero: types.Brick<HeroProps> = () => {
       />
       <Text
         renderBlock={(props) => (
-          <p className='text-lg md:text-xl xl:text-2xl text-center font-normal text-dark dark:text-white leading-tight'>
+          <p className='text-md md:text-xl xl:text-2xl text-center font-normal text-dark dark:text-white leading-tight'>
             {props.children}
           </p>
         )}

@@ -35,6 +35,7 @@ const Social: types.Brick<SocialProps> = ({ link, ...rest }) => {
 Social.schema = {
   name: 'social',
   label: 'Social',
+  hideFromAddMenu: true,
   sideEditProps: [
     {
       name: 'link',

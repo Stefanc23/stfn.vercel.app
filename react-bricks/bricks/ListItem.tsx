@@ -38,6 +38,7 @@ export default ListItem;
 ListItem.schema = {
   name: 'list-item',
   label: 'List Item',
+  hideFromAddMenu: true,
   getDefaultProps: () => ({
     text: 'Item',
   }),
