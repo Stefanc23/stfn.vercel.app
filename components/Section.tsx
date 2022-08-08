@@ -29,7 +29,7 @@ const Section: React.FC<SectionProps> = ({
           <h1 className='text-2xl md:text-3xl xl:text-4xl text-center font-bold text-transparent bg-clip-text bg-gradient-to-br from-primary to-secondary leading-tight mb-2'>
             {title}
           </h1>
-          <p className='text-sm md:text-md xl:text-lg text-center font-light text-dark/80 dark:text-white/80 leading-tight'>
+          <p className='text-sm md:text-base xl:text-lg text-center font-light text-dark/80 dark:text-white/80 leading-tight'>
             {subtitle}
           </p>
         </>

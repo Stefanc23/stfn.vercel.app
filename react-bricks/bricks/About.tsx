@@ -26,7 +26,7 @@ const About: types.Brick<AboutProps> = ({ title, subtitle }) => {
         <article className='col-span-2 mt-12 md:mt-0'>
           <RichText
             renderBlock={(props) => (
-              <h2 className='text-md md:text-lg xl:text-xl font-medium text-dark dark:text-light'>
+              <h2 className='text-base md:text-lg xl:text-xl font-medium text-dark dark:text-light'>
                 {props.children}
               </h2>
             )}

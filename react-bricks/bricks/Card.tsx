@@ -38,7 +38,7 @@ const Card: types.Brick<CardProps> = ({ ...rest }) => {
         />
         <Text
           renderBlock={(props) => (
-            <p className='text-sm xl:text-md font-light italic text-gray-300 mb-4'>
+            <p className='text-sm xl:text-base font-light italic text-gray-300 mb-4'>
               {props.children}
             </p>
           )}
@@ -47,7 +47,7 @@ const Card: types.Brick<CardProps> = ({ ...rest }) => {
         />
         <RichText
           renderBlock={(props) => (
-            <p className='text-md text-dark dark:text-light leading-6'>
+            <p className='text-base text-dark dark:text-light leading-6'>
               {props.children}
             </p>
           )}

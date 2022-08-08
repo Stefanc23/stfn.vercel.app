@@ -19,7 +19,7 @@ const Hero: types.Brick<HeroProps> = () => {
   return (
     <Section
       id='hero'
-      className='flex min-h-screen flex-col items-center justify-center text-center lg:-translate-y-16 lg:transform'
+      className='flex min-h-screen flex-col items-center justify-center text-center lg:-translate-y-24 lg:transform'
       isHero
     >
       <Text
@@ -42,7 +42,7 @@ const Hero: types.Brick<HeroProps> = () => {
       />
       <Text
         renderBlock={(props) => (
-          <p className='text-md md:text-xl xl:text-2xl text-center font-normal text-dark dark:text-white leading-tight'>
+          <p className='text-base md:text-xl xl:text-2xl text-center font-normal text-dark dark:text-white leading-tight'>
             {props.children}
           </p>
         )}

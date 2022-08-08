@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import React, { useState } from 'react';
 import OuterClickListener from './OuterClickListener';
+import UnstyledLink from './UnstyledLink';
 
 const Header: React.FC = () => {
   const [expanded, setExpanded] = useState(false);
@@ -17,7 +18,7 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className='fixed bottom-0 z-50 w-full bg-transparent py-4 lg:sticky lg:top-0'>
+    <header className='fixed bottom-0 z-50 w-full bg-transparent py-8 lg:sticky lg:top-0'>
       <div className='max-w-[68.75rem] mx-auto w-11/12 flex items-center justify-between'>
         <Link href='/'>
           <Image
@@ -60,12 +61,12 @@ const Header: React.FC = () => {
               </button>
             </li>
             <ul className='hidden lg:flex lg:space-x-4'>
-              {links.map(({ href, label }) => (
+              {links.map(({ href, label }, index) => (
                 <li
                   key={`${href}${label}`}
                   className='text-primary hover:text-secondary transition-colors'
                 >
-                  <Link href={href}>{label}</Link>
+                  <UnstyledLink href={href}>{label}</UnstyledLink>
                 </li>
               ))}
             </ul>
@@ -74,12 +75,12 @@ const Header: React.FC = () => {
           {expanded && (
             <ul className='fixed bottom-20 right-[8%] border-r-2 border-primary bg-transparent px-4 py-2 text-right md:right-[6%] lg:hidden'>
               <OuterClickListener action={handleClick}>
-                {links.map(({ href, label }) => (
+                {links.map(({ href, label }, index) => (
                   <li
                     key={`${href}${label}`}
                     className='mb-3 last:mb-0 text-primary hover:text-secondary transition-colors'
                   >
-                    <Link href={href}>{label}</Link>
+                    <UnstyledLink href={href}>{label}</UnstyledLink>
                   </li>
                 ))}
               </OuterClickListener>
