@@ -1,24 +1,13 @@
-# React Bricks starter with Next.js with Tailwind CSS and React Bricks UI
+# [stfn.tech](https://stfn.tech)
 
-Kick-start your project with this boilerplate for a complete Next.js website based on [React Bricks](https://reactbricks.com), with both the front-end and admin dashboard.
+Hi there! I'm Stefano and this is my portfolio website. It's a constant work in progress and I will keep improving it as my skill grows. Feel free to use this as an inspiration for your own project but don't forget to star this repository if you find this project useful.
 
-## 🚀 Quick start
+## Tech Stack
+- [Next JS (Typescript)](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [React Bricks](https://reactbricks.com/)
+- [Vercel](https://vercel.com/)
 
-We suggest that you use the CLI and choose this starter.  
-In this way you will have the credentials already set up in a `.env.local` file:
-
-```bash
-npx create-reactbricks-app
-# or
-yarn create reactbricks-app
-```
-
-Otherwise you can directly clone this repo:
-
-```bash
-git clone https://github.com/reactbricks/nextjs-starter-reactbricks-tailwind your-project
-```
-
-## 📖 Documentation
-
-Please, read our documentation at [Reactbricks.com](https://reactbricks.com).
+## Reference
+- [React Bricks tutorial](https://youtu.be/Ym6RYyRBPaA)
+- [Glowing background gradient effects](https://youtu.be/5W6kEP65AH4)
