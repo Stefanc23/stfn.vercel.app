@@ -23,9 +23,9 @@ const Button: types.Brick<ButtonProps> = ({
     <Link
       href={href}
       {...target}
-      className={`text-sm md:text-base text-medium rounded-full transition-color duration-300 ease-in-out cursor-pointer min-w-[120px] w-fit px-4 py-1.5 flex justify-center items-center ${
+      className={`text-sm md:text-base text-medium rounded-full cursor-pointer min-w-[120px] w-fit px-4 py-1.5 flex justify-center items-center ${
         type === 'solid'
-          ? 'bg-primary text-light hover:bg-gradient-to-br hover:from-primary hover:to-secondary'
+          ? 'bg-primary text-dark hover:bg-gradient-to-br hover:from-primary hover:to-secondary'
           : 'bg-transparent text-primary border border-primary hover:bg-secondary-300/50 hover:dark:bg-secondary-800/50'
       }`}
       {...rest}

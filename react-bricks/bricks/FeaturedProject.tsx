@@ -84,7 +84,7 @@ const FeaturedProject: types.Brick<FeaturedProjectProps> = ({
               <Link
                 href={demoLink}
                 target='_blank'
-                className='text-sm md:text-base text-medium rounded-full transition-color duration-300 ease-in-out cursor-pointer min-w-[120px] w-fit px-4 py-1.5 flex justify-center items-center bg-primary text-light hover:bg-gradient-to-br hover:from-primary hover:to-secondary'
+                className='text-sm md:text-base text-medium rounded-full cursor-pointer min-w-[120px] w-fit px-4 py-1.5 flex justify-center items-center bg-primary text-dark hover:bg-gradient-to-br hover:from-primary hover:to-secondary'
               >
                 See Demo
               </Link>
@@ -93,7 +93,7 @@ const FeaturedProject: types.Brick<FeaturedProjectProps> = ({
               <Link
                 href={codeLink}
                 target='_blank'
-                className='text-sm md:text-base text-medium rounded-full transition-color duration-300 ease-in-out cursor-pointer min-w-[120px] w-fit px-4 py-1.5 flex justify-center items-center bg-transparent text-primary border border-primary hover:bg-secondary-300/50 hover:dark:bg-secondary-800/50'
+                className='text-sm md:text-base text-medium rounded-full cursor-pointer min-w-[120px] w-fit px-4 py-1.5 flex justify-center items-center bg-transparent text-primary border border-primary hover:bg-secondary-300/50 hover:dark:bg-secondary-800/50'
               >
                 See Code
               </Link>

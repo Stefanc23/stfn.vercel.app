@@ -10,7 +10,7 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div className='relative'>
-      <div className='absolute top-0 left-0 w-full h-3 bg-gradient-to-br from-primary to-secondary'></div>
+      <div className='absolute top-0 left-0 w-full h-3 bg-gradient-to-r from-primary to-secondary animate-gradient'></div>
       <Header />
       <main className='mb-auto'>{children}</main>
       <Footer />

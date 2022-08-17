@@ -20,7 +20,7 @@ const Experience: types.Brick<ExperienceProps> = ({ title, subtitle }) => {
       <Repeater
         propName='experiences'
         renderWrapper={(items) => (
-          <div className='flex flex-col gap-y-12 w-[80%] max-w-[720px] mt-16 mx-auto'>
+          <div className='flex flex-col gap-y-12 w-full max-w-[720px] mt-16 mx-auto'>
             {items}
           </div>
         )}

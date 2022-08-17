@@ -25,8 +25,13 @@ const Header: React.FC = () => {
             className='cursor-pointer'
             src='/logo.webp'
             alt='logo'
+            layout='fixed'
             width={48}
             height={48}
+            quality={100}
+            placeholder='blur'
+            blurDataURL='/favicon.ico'
+            priority
           />
         </Link>
         <nav>
@@ -61,7 +66,7 @@ const Header: React.FC = () => {
               </button>
             </li>
             <ul className='hidden lg:flex lg:space-x-4'>
-              {links.map(({ href, label }, index) => (
+              {links.map(({ href, label }) => (
                 <li
                   key={`${href}${label}`}
                   className='text-primary hover:text-secondary transition-colors'
@@ -75,7 +80,7 @@ const Header: React.FC = () => {
           {expanded && (
             <ul className='fixed bottom-20 right-[8%] border-r-2 border-primary bg-transparent px-4 py-2 text-right md:right-[6%] lg:hidden'>
               <OuterClickListener action={handleClick}>
-                {links.map(({ href, label }, index) => (
+                {links.map(({ href, label }) => (
                   <li
                     key={`${href}${label}`}
                     className='mb-3 last:mb-0 text-primary hover:text-secondary transition-colors'

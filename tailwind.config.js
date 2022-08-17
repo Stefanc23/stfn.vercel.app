@@ -38,15 +38,26 @@ module.exports = {
           900: '#000000',
         },
         light: '#EDF2F7',
-        dark: '#232323',
+        dark: '#222831',
       },
       fontFamily: {
         sans: ['Inter', fontFamily.sans],
       },
       animation: {
+        gradient: 'gradient 10s infinite alternate',
         tilt: 'tilt 10s infinite linear',
       },
       keyframes: {
+        gradient: {
+          '0%': {
+            backgroundSize: '300%',
+            backgroundPosition: 'left',
+          },
+          '100%': {
+            backgroundSize: '300%',
+            backgroundPosition: 'right',
+          },
+        },
         tilt: {
           '0%, 50%, 100%': {
             transform: 'rotate(0deg)',
