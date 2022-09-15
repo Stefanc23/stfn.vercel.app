@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint",
     "format": "prettier -w .",
@@ -14,6 +15,7 @@
   },
   "dependencies": {
     "next": "^12.2.2",
+    "next-sitemap": "^3.1.22",
     "next-themes": "^0.2.0",
     "prism-theme-night-owl": "^1.4.0",
     "prismjs": "^1.28.0",
