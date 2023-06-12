@@ -42,13 +42,16 @@ export default function RootLayout({
         />
         <link rel="manifest" href="/site.webmanifest" />
       </head>
-      <body className={quicksand.className}>
+      <body className={`bg-light dark:bg-dark ${quicksand.className}`}>
         <Providers>
-          <Header />
-          <main className="max-w-[56.25rem] min-h-[50vh] mx-auto w-11/12 mb-32">
-            {children}
-          </main>
-          <Footer />
+          <div className="relative">
+            <div className="absolute top-0 left-0 w-full h-3 bg-gradient-to-r from-primary to-secondary animate-gradient"></div>
+            <Header />
+            <main className="max-w-[120rem] min-h-[calc(100vh-180px)] mx-auto w-11/12 py-8">
+              {children}
+            </main>
+            <Footer />
+          </div>
         </Providers>
       </body>
     </html>

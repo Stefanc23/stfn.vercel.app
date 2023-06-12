@@ -21,8 +21,8 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="fixed bottom-0 z-50 w-full bg-transparent py-5 md:sticky md:top-0">
-      <div className="max-w-[56.25rem] mx-auto w-11/12 flex items-center justify-between">
+    <header className="fixed bottom-0 z-50 w-full bg-transparent py-5 md:py-8 md:sticky md:top-0">
+      <div className="max-w-[120rem] mx-auto w-11/12 flex items-center justify-between">
         <Link href="/">
           <Image
             className="cursor-pointer rounded-full"
@@ -37,7 +37,7 @@ const Header: React.FC = () => {
           />
         </Link>
         <nav>
-          <ul className="flex items-center justify-between space-x-4">
+          <ul className="flex items-center justify-between space-x-4 md:flex-row flex-row-reverse">
             <li className="md:hidden">
               <button
                 className={`${

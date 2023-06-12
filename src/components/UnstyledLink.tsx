@@ -24,6 +24,7 @@ const UnstyledLink: React.FC<UnstyledLinkProps> = ({
       target="_blank"
       rel="noopener noreferrer"
       href={href}
+      {...nextLinkProps}
       className={className}
     >
       {children}

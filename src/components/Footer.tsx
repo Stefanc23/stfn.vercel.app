@@ -1,9 +1,16 @@
+import UnstyledLink from './UnstyledLink';
+
 const Footer = () => {
   return (
     <footer className="bg-transparent w-full">
-      <p className="py-2 w-fit mx-auto text-sm md:text-base">
+      <p className="py-5 w-fit mx-auto text-sm md:text-base">
         &copy; {new Date().getFullYear()} by&nbsp;
-        <span className="text-primary">Stefano Christian Wiryana</span>
+        <UnstyledLink
+          href="https://github.com/stefanc23"
+          className="text-primary"
+        >
+          Stefano Christian Wiryana
+        </UnstyledLink>
       </p>
     </footer>
   );
