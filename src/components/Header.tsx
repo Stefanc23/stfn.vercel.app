@@ -6,10 +6,12 @@ import React, { useState, useEffect } from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { ImMail4 } from 'react-icons/im';
 import { MdMenu, MdOutlineClose } from 'react-icons/md';
+import { motion } from 'framer-motion';
 
-import OuterClickListener from './OuterClickListener';
-import UnstyledLink from './UnstyledLink';
-import ThemeSwitcher from './ThemeSwitcher';
+import OuterClickListener from '@/components/OuterClickListener';
+import UnstyledLink from '@/components/UnstyledLink';
+import ThemeSwitcher from '@/components/ThemeSwitcher';
+import { fadeIn } from '@/utils/motions';
 
 const Header: React.FC = () => {
   const [expanded, setExpanded] = useState(false);
@@ -36,7 +38,7 @@ const Header: React.FC = () => {
     <header
       className={`fixed bottom-0 z-50 w-full py-5 md:py-8 md:sticky md:top-0 ${headerBg}`}
     >
-      <div className="max-w-[120rem] mx-auto w-11/12 flex items-center justify-between">
+      <div className="max-w-[69rem] mx-auto w-11/12 flex items-center justify-between">
         <div className="flex">
           <Link href="/">
             <Image
@@ -111,15 +113,18 @@ const Header: React.FC = () => {
           </ul>
 
           {expanded && (
-            <ul className="fixed bottom-20 right-[8%] border-r-2 border-primary bg-transparent px-4 py-2 text-right md:right-[6%] md:hidden">
+            <ul className="fixed bottom-20 right-[8%] border-r-2 border-primary opacity-80 px-4 py-2 text-right md:right-[6%] md:hidden">
               <OuterClickListener action={handleClick}>
-                {links.map(({ href, label }) => (
-                  <li
+                {links.map(({ href, label }, index) => (
+                  <motion.li
                     key={`${href}${label}`}
                     className="mb-3 last:mb-0 text-primary hover:text-secondary transition-colors"
+                    variants={fadeIn('up', 'spring', index * 0.1, 0.25)}
+                    initial="hidden"
+                    whileInView="show"
                   >
                     <UnstyledLink href={href}>{label}</UnstyledLink>
-                  </li>
+                  </motion.li>
                 ))}
               </OuterClickListener>
             </ul>

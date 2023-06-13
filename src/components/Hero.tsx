@@ -1,0 +1,70 @@
+'use client';
+
+import { motion } from 'framer-motion';
+
+import Button from '@/components/Button';
+import Section from '@/components/Section';
+import { fadeIn } from '@/utils/motions';
+
+const Hero = () => {
+  return (
+    <Section
+      id="hero"
+      className="flex flex-col lg:flex-row min-h-[calc(100vh-300px)]"
+      isHero
+    >
+      <article className="flex flex-col justify-center lg:w-2/3">
+        <motion.h2
+          className="text-2xl md:text-4xl 2xl:text-5xl font-semibold leading-wide"
+          variants={fadeIn('up', 'spring', 0, 0.75)}
+        >
+          Hi!
+        </motion.h2>
+        <motion.h1
+          className="mt-3 text-3xl md:text-5xl 2xl:text-6xl font-bold leading-wide"
+          variants={fadeIn('up', 'spring', 0.25, 0.75)}
+        >
+          My Name is&nbsp;
+          <span className="text-transparent bg-clip-text bg-gradient-to-br from-primary to-secondary">
+            Stefano
+          </span>
+        </motion.h1>
+        <motion.p
+          className="mt-4 max-w-4xl text-gray-700 dark:text-gray-200 md:mt-6 md:text-lg 2xl:text-xl"
+          variants={fadeIn('up', 'spring', 0.5, 0.75)}
+        >
+          I am a Computer Science graduate from BINUS University with a passion
+          in software development.
+        </motion.p>
+        <motion.ul
+          className="mt-10 flex space-x-8"
+          variants={fadeIn('up', 'spring', 0.75, 0.75)}
+        >
+          <li>
+            <Button
+              variant="solid"
+              highlight
+              onClick={() => {
+                window.open('#projects', '_self');
+              }}
+            >
+              See my work
+            </Button>
+          </li>
+          <li>
+            <Button
+              variant="outline"
+              onClick={() => {
+                window.open('/resume.pdf', '_blank');
+              }}
+            >
+              Download my resume
+            </Button>
+          </li>
+        </motion.ul>
+      </article>
+    </Section>
+  );
+};
+
+export default Hero;
