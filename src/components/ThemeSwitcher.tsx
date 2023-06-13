@@ -13,13 +13,13 @@ const ThemeSwitcher = () => {
     setMounted(true);
   }, []);
 
-  if (!mounted) {
-    return null;
-  }
-
   return (
-    <div className="flex items-center text-primary hover:text-secondary transition-colors text-2xl">
-      {theme === 'dark' ? (
+    <div
+      className={`flex items-center text-primary hover:text-secondary transition-colors text-2xl ${
+        !mounted && 'invisible'
+      }`}
+    >
+      {theme === 'dark' && mounted ? (
         <button onClick={() => setTheme('light')}>
           <MdLightMode />
         </button>
