@@ -40,20 +40,39 @@ const Header: React.FC = () => {
     >
       <div className="max-w-[69rem] mx-auto w-11/12 flex items-center justify-between">
         <div className="flex">
-          <Link href="/">
-            <Image
-              className="cursor-pointer rounded-full"
-              src="/logo.svg"
-              alt="logo"
-              width={48}
-              height={48}
-              quality={100}
-              placeholder="blur"
-              blurDataURL="/favicon.ico"
-              priority
-            />
-          </Link>
-          <ul className="ml-20 flex items-center space-x-4 text-2xl text-primary">
+          <motion.div
+            initial={{ x: -500, opacity: 0, scale: 0.5 }}
+            animate={{ x: 0, opacity: 1, scale: 1 }}
+            transition={{
+              type: 'spring',
+              duration: 1.25,
+            }}
+          >
+            <Link href="/">
+              <Image
+                className="cursor-pointer rounded-full"
+                src="/logo.svg"
+                alt="logo"
+                width={48}
+                height={48}
+                quality={100}
+                placeholder="blur"
+                blurDataURL="/favicon.ico"
+                priority
+              />
+            </Link>
+          </motion.div>
+
+          <motion.ul
+            className="ml-20 flex items-center space-x-4 text-2xl text-primary"
+            initial={{ x: -500, opacity: 0, scale: 0.5 }}
+            animate={{ x: 0, opacity: 1, scale: 1 }}
+            transition={{
+              type: 'spring',
+              duration: 1.25,
+              delay: 0.25,
+            }}
+          >
             <li className="text-base hidden md:block">Reach out to me:</li>
             <li
               className="hover:text-secondary transition-colors"
@@ -79,10 +98,17 @@ const Header: React.FC = () => {
                 <FaLinkedin />
               </UnstyledLink>
             </li>
-          </ul>
+          </motion.ul>
         </div>
 
-        <nav>
+        <motion.nav
+          initial={{ x: 500, opacity: 0, scale: 0.5 }}
+          animate={{ x: 0, opacity: 1, scale: 1 }}
+          transition={{
+            type: 'spring',
+            duration: 1.25,
+          }}
+        >
           <ul className="flex items-center justify-between space-x-4 md:flex-row flex-row-reverse">
             <li className="md:hidden">
               <button
@@ -129,7 +155,7 @@ const Header: React.FC = () => {
               </OuterClickListener>
             </ul>
           )}
-        </nav>
+        </motion.nav>
       </div>
     </header>
   );
