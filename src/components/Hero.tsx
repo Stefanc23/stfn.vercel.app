@@ -10,7 +10,7 @@ const Hero = () => {
   return (
     <Section
       id="hero"
-      className="flex flex-col lg:flex-row min-h-[calc(100vh-300px)]"
+      className="min-h-screen flex flex-col justify-center md:justify-start lg:flex-row lg:-translate-y-24 lg:transform"
       isHero
     >
       <article className="flex flex-col justify-center lg:w-2/3">

@@ -20,11 +20,17 @@ const ThemeSwitcher = () => {
       }`}
     >
       {theme === 'dark' && mounted ? (
-        <button onClick={() => setTheme('light')}>
+        <button
+          onClick={() => setTheme('light')}
+          aria-label="Switch to light mode"
+        >
           <MdLightMode />
         </button>
       ) : (
-        <button onClick={() => setTheme('dark')}>
+        <button
+          onClick={() => setTheme('dark')}
+          aria-label="Switch to dark mode"
+        >
           <MdDarkMode />
         </button>
       )}

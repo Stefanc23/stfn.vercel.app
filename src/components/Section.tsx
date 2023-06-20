@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { motion } from 'framer-motion';
 
@@ -8,8 +10,8 @@ type SectionProps = {
   className?: string;
   children?: React.ReactNode;
 } & (
-  | { isHero: true; title?: never; subtitle?: never }
-  | { isHero?: false; title: string; subtitle: string }
+  | { isHero: true; title?: never; overline?: never }
+  | { isHero?: false; title: string; overline: string }
 );
 
 const Section: React.FC<SectionProps> = ({
@@ -18,26 +20,24 @@ const Section: React.FC<SectionProps> = ({
   id,
   isHero,
   title,
-  subtitle,
+  overline,
 }) => {
   return (
     <motion.section
       id={id}
-      className={`max-w-[69rem] mx-auto w-11/12 mb-32 pt-16
-      } ${className}`}
+      className={`max-w-[69rem] mx-auto w-11/12 mb-20
+      ${!isHero && 'pt-0 md:pt-[120px]'} ${className}`}
       variants={staggerContainer()}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true, amount: 0.25 }}
+      viewport={{ once: true, amount: 0.5 }}
     >
       {!isHero && (
-        <motion.div variants={textVariant()}>
-          <h1 className="text-2xl md:text-3xl xl:text-4xl text-center font-bold text-transparent bg-clip-text bg-gradient-to-br from-primary to-secondary leading-tight mb-2">
-            {title}
-          </h1>
-          <p className="text-sm md:text-base xl:text-lg text-center font-light text-dark/80 dark:text-white/80 leading-tight">
-            {subtitle}
+        <motion.div variants={textVariant()} className="text-left">
+          <p className="text-md md:text-xl 2xl:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-primary to-secondary leading-wider">
+            {overline}
           </p>
+          <h1 className="text-3xl md:text-5xl 2xl:text-6xl">{title}</h1>
         </motion.div>
       )}
 

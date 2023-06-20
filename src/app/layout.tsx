@@ -21,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className="!scroll-smooth">
       <head>
         <link
           rel="apple-touch-icon"
@@ -43,11 +43,15 @@ export default function RootLayout({
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body
-        className={`bg-light dark:bg-dark selection:bg-primary selection:text-dark ${quicksand.className}`}
+        className={`bg-light dark:bg-dark selection:bg-primary selection:text-light dark:selection:text-dark ${quicksand.className}`}
+        suppressHydrationWarning={true}
       >
         <Providers>
           <div className="relative">
-            <div className="absolute top-0 left-0 w-full h-3 bg-gradient-to-r from-primary to-secondary animate-gradient"></div>
+            <div
+              id="top"
+              className="absolute top-0 left-0 w-full h-3 bg-gradient-to-r from-primary to-secondary animate-gradient"
+            ></div>
             <Header />
             <main>{children}</main>
             <Footer />
