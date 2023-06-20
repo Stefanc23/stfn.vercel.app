@@ -9,7 +9,7 @@ const useOuterClickListener = (
 ) => {
   useEffect(() => {
     /**
-     * Do sometihing when clicked on outside of element
+     * Do something when clicked on outside of element
      */
     function handleClickOutside(event: Event) {
       if (ref.current && !ref.current.contains(event.target as Node)) {
