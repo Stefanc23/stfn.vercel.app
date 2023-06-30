@@ -23,7 +23,7 @@ export const fadeIn = (
   direction: MotionDirection,
   type: MotionType,
   delay = 0,
-  duration = 0.5
+  duration = 1.25
 ) => {
   return {
     hidden: {
@@ -45,7 +45,7 @@ export const fadeIn = (
   };
 };
 
-export const zoomIn = (delay = 0, duration = 0.5) => {
+export const zoomIn = (delay = 0, duration = 1.25) => {
   return {
     hidden: {
       scale: 0,

@@ -7,16 +7,19 @@ const experience = {
       name: 'role',
       title: 'Role',
       type: 'string',
+      required: true,
     },
     {
       name: 'company',
       title: 'Company',
       type: 'string',
+      required: true,
     },
     {
       name: 'startDate',
       title: 'Start Date',
       type: 'date',
+      required: true,
     },
     {
       name: 'endDate',
@@ -27,6 +30,7 @@ const experience = {
       name: 'location',
       title: 'Location',
       type: 'string',
+      required: true,
     },
     {
       name: 'employmentType',
@@ -38,13 +42,16 @@ const experience = {
           { title: 'Part Time', value: 'Part Time' },
           { title: 'Contract', value: 'Contract' },
           { title: 'Internship', value: 'Internship' },
+          { title: 'Freelance', value: 'Freelance' },
         ],
       },
+      required: true,
     },
     {
       name: 'description',
       title: 'Description',
       type: 'text',
+      required: true,
     },
   ],
 };

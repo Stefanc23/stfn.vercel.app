@@ -2,17 +2,18 @@ const about = {
   name: 'about',
   title: 'About',
   type: 'document',
-  limit: 1,
   fields: [
     {
       name: 'displayName',
       title: 'Display Name',
       type: 'string',
+      required: true,
     },
     {
       name: 'bio',
       title: 'Bio',
       type: 'text',
+      required: true,
     },
     {
       name: 'profileImage',
@@ -21,12 +22,14 @@ const about = {
       options: {
         hotspot: true,
       },
+      required: true,
     },
     {
       name: 'skills',
       title: 'Skills',
       type: 'array',
       of: [{ type: 'skill' }],
+      required: true,
     },
   ],
 };
