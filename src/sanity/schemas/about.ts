@@ -10,6 +10,12 @@ const about = {
       required: true,
     },
     {
+      name: 'tagline',
+      title: 'Tagline',
+      type: 'string',
+      required: true,
+    },
+    {
       name: 'bio',
       title: 'Bio',
       type: 'text',
@@ -22,6 +28,12 @@ const about = {
       options: {
         hotspot: true,
       },
+      required: true,
+    },
+    {
+      name: 'resumeFile',
+      title: 'Resume File',
+      type: 'file',
       required: true,
     },
     {

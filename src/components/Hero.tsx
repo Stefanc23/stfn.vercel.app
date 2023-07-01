@@ -5,8 +5,9 @@ import { motion } from 'framer-motion';
 import Button from '@/components/Button';
 import Section from '@/components/Section';
 import { fadeIn } from '@/utils/motions';
+import { FaFilePdf } from 'react-icons/fa';
 
-const Hero = () => {
+const Hero = ({ tagline, resumeUrl }: any) => {
   return (
     <Section
       id="hero"
@@ -33,8 +34,7 @@ const Hero = () => {
           className="mt-4 max-w-4xl text-gray-700 dark:text-gray-200 md:mt-6 md:text-lg 2xl:text-xl"
           variants={fadeIn('up', 'spring', 0.5, 0.75)}
         >
-          I am a Computer Science graduate from BINUS University with a passion
-          in software development.
+          {tagline}
         </motion.p>
         <motion.ul
           className="mt-10 flex space-x-8"
@@ -55,10 +55,11 @@ const Hero = () => {
             <Button
               variant="outline"
               onClick={() => {
-                window.open('/resume.pdf', '_blank');
+                window.open(`${resumeUrl}?dl=`, '_blank');
               }}
             >
-              Download my resume
+              <FaFilePdf />
+              &nbsp;Download Resume
             </Button>
           </li>
         </motion.ul>
