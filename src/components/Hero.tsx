@@ -17,13 +17,13 @@ const Hero = ({ tagline, resumeUrl }: any) => {
       <article className="flex flex-col justify-center lg:w-2/3">
         <motion.h2
           className="text-2xl md:text-4xl 2xl:text-5xl font-semibold leading-wide"
-          variants={fadeIn('up', 'spring', 0, 0.75)}
+          variants={fadeIn('up', 'spring', 0, 0.5)}
         >
           Hi!
         </motion.h2>
         <motion.h1
           className="mt-3 text-3xl md:text-5xl 2xl:text-6xl font-bold leading-wide"
-          variants={fadeIn('up', 'spring', 0.25, 0.75)}
+          variants={fadeIn('up', 'spring', 0.1, 0.5)}
         >
           My Name is&nbsp;
           <span className="text-transparent bg-clip-text bg-gradient-to-br from-primary to-secondary">
@@ -32,13 +32,13 @@ const Hero = ({ tagline, resumeUrl }: any) => {
         </motion.h1>
         <motion.p
           className="mt-4 max-w-4xl text-gray-700 dark:text-gray-200 md:mt-6 md:text-lg 2xl:text-xl"
-          variants={fadeIn('up', 'spring', 0.5, 0.75)}
+          variants={fadeIn('up', 'spring', 0.2, 0.5)}
         >
           {tagline}
         </motion.p>
         <motion.ul
-          className="mt-10 flex space-x-8"
-          variants={fadeIn('up', 'spring', 0.75, 0.75)}
+          className="mt-10 flex flex-col sm:flex-row space-y-8 sm:space-y-0 sm:space-x-8"
+          variants={fadeIn('up', 'spring', 0.3, 0.5)}
         >
           <li>
             <Button

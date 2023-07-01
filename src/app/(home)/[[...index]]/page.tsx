@@ -10,10 +10,11 @@ export default async function Home() {
   const aboutData = await fetchAboutData();
   const experienceData = await fetchExperienceData();
   const projectData = await fetchProjectData();
+  const { tagline, resumeUrl } = aboutData;
 
   return (
     <>
-      <Hero />
+      <Hero tagline={tagline} resumeUrl={resumeUrl} />
       <About data={aboutData} />
       <Experience data={experienceData} />
       <Projects data={projectData} />

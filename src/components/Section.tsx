@@ -30,7 +30,7 @@ const Section: React.FC<SectionProps> = ({
       variants={staggerContainer()}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true, amount: 0.5 }}
+      viewport={{ once: true, amount: 0.1 }}
     >
       {!isHero && (
         <motion.div variants={textVariant()} className="text-left">

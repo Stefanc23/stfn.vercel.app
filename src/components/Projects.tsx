@@ -10,7 +10,7 @@ import PillButton from '@/components/PillButton';
 import Card from '@/components/Card';
 import UnstyledLink from '@/components/UnstyledLink';
 import { urlForImage } from '@/sanity/lib/image';
-import { fadeIn, staggerContainer } from '@/utils/motions';
+import { fadeIn } from '@/utils/motions';
 
 const Projects = ({ data }: any) => {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -65,12 +65,7 @@ const Projects = ({ data }: any) => {
             </PillButton>
           ))}
         </motion.div>
-        <motion.div
-          variants={staggerContainer()}
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-5 gap-x-5"
-        >
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-5 gap-x-5">
           {filteredData.map(
             (
               { name, description, image, repoLink, demoLink }: any,
@@ -78,11 +73,13 @@ const Projects = ({ data }: any) => {
             ) => (
               <motion.div
                 key={name}
-                animate={animateCard}
+                initial={{ y: 100, opacity: 0 }}
                 transition={{
                   delay: i * 0.1,
-                  ease: 'easeInOut',
+                  ease: 'easeOut',
                 }}
+                whileInView={animateCard}
+                viewport={{ once: true }}
               >
                 <Card
                   title={
@@ -90,7 +87,7 @@ const Projects = ({ data }: any) => {
                       {name}
                     </span>
                   }
-                  cardClassName="!p-5 border border-primary hover:scale-105 transition duration-300 ease-in-out"
+                  cardClassName="!p-5 border border-primary hover:md:scale-105 transition duration-300 ease-in-out"
                   noHighlight
                 >
                   <p className="mt-2 mb-5 h-[69px] hyphens-auto">
@@ -101,6 +98,7 @@ const Projects = ({ data }: any) => {
                     alt={name}
                     width={500}
                     height={300}
+                    quality={100}
                     className="rounded-lg"
                   />
                   <div className="flex justify-center mt-5 w-full justify-between">
@@ -127,7 +125,7 @@ const Projects = ({ data }: any) => {
               </motion.div>
             )
           )}
-        </motion.div>
+        </div>
       </div>
     </Section>
   );
