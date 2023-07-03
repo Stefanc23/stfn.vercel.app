@@ -1,4 +1,5 @@
 import { Quicksand } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/react';
 
 import '@/app/globals.css';
 import Providers from '@/app/providers';
@@ -57,6 +58,7 @@ export default function RootLayout({
             <Footer />
           </div>
         </Providers>
+        <Analytics />
       </body>
     </html>
   );

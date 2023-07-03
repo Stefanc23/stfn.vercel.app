@@ -7,6 +7,7 @@ export interface UnstyledLinkProps {
   openNewTab?: boolean;
   className?: string;
   nextLinkProps?: Omit<LinkProps, 'href'>;
+  'aria-label'?: React.ComponentProps<'a'>['aria-label'];
 }
 
 const UnstyledLink: React.FC<UnstyledLinkProps> = ({
@@ -15,6 +16,7 @@ const UnstyledLink: React.FC<UnstyledLinkProps> = ({
   openNewTab,
   className,
   nextLinkProps,
+  'aria-label': ariaLabel = '',
 }) => {
   const shouldOpenInNewTab =
     openNewTab || !(href.startsWith('/') || href.startsWith('#'));
@@ -30,7 +32,12 @@ const UnstyledLink: React.FC<UnstyledLinkProps> = ({
       {children}
     </Link>
   ) : (
-    <Link href={href} {...nextLinkProps} className={className}>
+    <Link
+      href={href}
+      {...nextLinkProps}
+      className={className}
+      aria-label={ariaLabel}
+    >
       {children}
     </Link>
   );
