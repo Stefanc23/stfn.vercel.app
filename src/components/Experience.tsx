@@ -2,8 +2,8 @@
 
 import { motion } from 'framer-motion';
 
-import Section from '@/components/Section';
 import ExperienceCard from '@/components/ExperienceCard';
+import Section from '@/components/Section';
 import { fadeIn } from '@/utils/motions';
 
 const Experience = ({ data }: any) => {

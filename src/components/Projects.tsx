@@ -1,13 +1,13 @@
 'use client';
 
-import { Key, useState } from 'react';
-import Image from 'next/image';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
+import { Key, useState } from 'react';
 import { FaCode, FaExternalLinkAlt } from 'react-icons/fa';
 
-import Section from '@/components/Section';
-import PillButton from '@/components/PillButton';
 import Card from '@/components/Card';
+import PillButton from '@/components/PillButton';
+import Section from '@/components/Section';
 import UnstyledLink from '@/components/UnstyledLink';
 import { urlForImage } from '@/sanity/lib/image';
 import { fadeIn } from '@/utils/motions';
@@ -99,6 +99,8 @@ const Projects = ({ data }: any) => {
                     width={500}
                     height={300}
                     quality={100}
+                    placeholder="blur"
+                    blurDataURL={urlForImage(image).size(100, 60).url()}
                     className="rounded-lg"
                   />
                   <div className="flex justify-center mt-5 w-full justify-between">

@@ -1,11 +1,11 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { FaFilePdf } from 'react-icons/fa';
 
 import Button from '@/components/Button';
 import Section from '@/components/Section';
 import { fadeIn } from '@/utils/motions';
-import { FaFilePdf } from 'react-icons/fa';
 
 const Hero = ({ tagline, resumeUrl }: any) => {
   return (

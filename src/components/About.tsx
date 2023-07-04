@@ -4,10 +4,10 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { FiCheck } from 'react-icons/fi';
 
-import Section from '@/components/Section';
-import { fadeIn } from '@/utils/motions';
 import Card from '@/components/Card';
+import Section from '@/components/Section';
 import { urlForImage } from '@/sanity/lib/image';
+import { fadeIn } from '@/utils/motions';
 
 const About = ({ data }: any) => {
   // group skills by category
@@ -48,7 +48,7 @@ const About = ({ data }: any) => {
           <div className="relative">
             <Image
               className="w-[250px] h-[250px] md:w-[250px] md:h-[375px] rounded-full md:rounded-lg"
-              src={urlForImage(data.profileImage).url()}
+              src={urlForImage(data.profileImage).size(250, 375).url()}
               alt="Profile Image"
               width={250}
               height={375}

@@ -2,7 +2,6 @@
 User-agent: *
 Allow: /
 Disallow: /studio
-Disallow: /_vercel
 
 # Host
 Host: https://stfn.vercel.app

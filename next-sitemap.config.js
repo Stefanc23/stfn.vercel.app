@@ -3,13 +3,13 @@
 module.exports = {
   siteUrl: 'https://stfn.vercel.app',
   generateRobotsTxt: true,
-  exclude: ['/studio', '/_vercel'],
+  exclude: ['/studio'],
   robotsTxtOptions: {
     policies: [
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/studio', '/_vercel'],
+        disallow: ['/studio'],
       },
     ],
   },

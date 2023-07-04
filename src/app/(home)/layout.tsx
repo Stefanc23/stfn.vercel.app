@@ -1,10 +1,11 @@
-import { Quicksand } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
+import { Quicksand } from 'next/font/google';
 
 import '@/app/globals.css';
+
 import Providers from '@/app/providers';
-import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import Header from '@/components/Header';
 
 const quicksand = Quicksand({
   subsets: ['latin-ext'],

@@ -1,4 +1,4 @@
-import UnstyledLink from './UnstyledLink';
+import UnstyledLink from '@/components/UnstyledLink';
 
 const Footer = () => {
   return (

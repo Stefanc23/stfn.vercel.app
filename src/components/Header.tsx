@@ -1,19 +1,19 @@
 'use client';
 
-import Link from 'next/link';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
-import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { useEffect, useState } from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { ImMail4 } from 'react-icons/im';
 import { MdMenu, MdOutlineClose } from 'react-icons/md';
-import { motion } from 'framer-motion';
 
 import OuterClickListener from '@/components/OuterClickListener';
-import UnstyledLink from '@/components/UnstyledLink';
 import ThemeSwitcher from '@/components/ThemeSwitcher';
+import UnstyledLink from '@/components/UnstyledLink';
 import { fadeIn } from '@/utils/motions';
 
-const Header: React.FC = () => {
+const Header = () => {
   const [expanded, setExpanded] = useState(false);
   const [headerBg, setHeaderBg] = useState('');
   const links = [
