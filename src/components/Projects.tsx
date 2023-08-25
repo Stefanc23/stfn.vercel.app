@@ -90,7 +90,7 @@ const Projects = ({ data }: any) => {
                   cardClassName="!p-5 border border-primary hover:md:scale-105 transition duration-300 ease-in-out"
                   noHighlight
                 >
-                  <p className="mt-2 mb-5 h-[69px] hyphens-auto">
+                  <p className="mt-2 mb-5 h-[72px] hyphens-auto">
                     {description}
                   </p>
                   <Image
@@ -104,6 +104,7 @@ const Projects = ({ data }: any) => {
                     className="rounded-lg"
                   />
                   <div className="flex justify-center mt-5 w-full justify-between">
+                    {!repoLink && !demoLink && <p>&nbsp;</p>}
                     {repoLink && (
                       <UnstyledLink
                         href={repoLink}
