@@ -55,7 +55,7 @@ const Hero = ({ tagline, resumeUrl }: any) => {
             <Button
               variant="outline"
               onClick={() => {
-                window.open(`${resumeUrl}?dl=`, '_blank');
+                window.open(resumeUrl, '_blank');
               }}
             >
               <FaFilePdf />

@@ -34,6 +34,9 @@ const about = {
       name: 'resumeFile',
       title: 'Resume File',
       type: 'file',
+      options: {
+        accept: '.pdf',
+      },
       required: true,
     },
     {
