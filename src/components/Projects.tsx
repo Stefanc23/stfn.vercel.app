@@ -65,7 +65,7 @@ const Projects = ({ data }: any) => {
             </PillButton>
           ))}
         </motion.div>
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-5 gap-x-5">
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-y-8 gap-x-8">
           {filteredData.map(
             (
               { name, description, image, repoLink, demoLink }: any,
@@ -90,7 +90,7 @@ const Projects = ({ data }: any) => {
                   cardClassName="!p-5 border border-primary hover:md:scale-105 transition duration-300 ease-in-out"
                   noHighlight
                 >
-                  <p className="mt-2 mb-5 h-[72px] hyphens-auto">
+                  <p className="mt-2 mb-5 min-h-[72px] hyphens-auto">
                     {description}
                   </p>
                   <Image
