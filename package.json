@@ -1,6 +1,6 @@
 {
   "name": "stfn.vercel.app",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -33,12 +33,12 @@
     "eslint": "8.42.0",
     "eslint-config-next": "13.4.4",
     "framer-motion": "^10.12.16",
-    "next": "^13.4.7",
+    "next": "^14.0.0",
     "next-sanity": "4.3.3",
     "next-sitemap": "^4.1.8",
     "next-themes": "^0.2.1",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-icons": "^4.9.0",
     "sanity": "^3.0.0",
     "sharp": "^0.32.1",
