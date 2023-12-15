@@ -8,7 +8,9 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ message: 'Invalid secret' }, { status: 401 });
   }
 
+  // Add routes that use data from sanity
   revalidatePath('/');
+  revalidatePath('/resume');
 
   return NextResponse.json({ revalidated: true, now: Date.now() });
 }
