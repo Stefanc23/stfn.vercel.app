@@ -41,7 +41,7 @@ const Projects = ({ data }: any) => {
 
   return (
     <Section id="projects" title="Showcase of My Work" overline="Projects">
-      <div className="px-4 mx-auto w-full mt-20">
+      <div className="px-4 mx-auto w-full max-w-[360px] md:max-w-none mt-20">
         <motion.div
           className="flex justify-center w-full items-center"
           variants={fadeIn('down', 'spring', 0.25)}
@@ -90,21 +90,21 @@ const Projects = ({ data }: any) => {
                   cardClassName="!p-5 border border-primary hover:md:scale-105 transition duration-300 ease-in-out"
                   noHighlight
                 >
-                  <p className="mt-2 mb-5 min-h-[72px] hyphens-auto">
+                  <p className="mt-2 mb-5 min-h-[72px] xl:min-h-[96px] hyphens-auto md:max-xl:text-sm">
                     {description}
                   </p>
-                  <Image
-                    src={urlForImage(image).url()}
-                    alt={name}
-                    width={500}
-                    height={300}
-                    quality={100}
-                    placeholder="blur"
-                    blurDataURL={urlForImage(image).size(100, 60).url()}
-                    className="rounded-lg"
-                  />
+                  <div className="relative w-full aspect-[4/3]">
+                    <Image
+                      src={urlForImage(image).url()}
+                      fill
+                      className="rounded-lg"
+                      alt={name}
+                    />
+                  </div>
                   <div className="flex justify-center mt-5 w-full justify-between">
-                    {!repoLink && !demoLink && <p>&nbsp;</p>}
+                    {!repoLink && !demoLink && (
+                      <p className="text-sm">&nbsp;</p>
+                    )}
                     {repoLink && (
                       <UnstyledLink
                         href={repoLink}
