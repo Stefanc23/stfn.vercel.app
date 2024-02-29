@@ -1,6 +1,6 @@
 {
   "name": "stfn.vercel.app",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -30,6 +30,7 @@
     "@types/react-dom": "18.2.4",
     "@types/styled-components": "5.1.0",
     "@vercel/analytics": "^1.0.1",
+    "@vercel/speed-insights": "^1.0.10",
     "eslint": "8.42.0",
     "eslint-config-next": "13.4.4",
     "framer-motion": "^10.12.16",
